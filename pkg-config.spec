@@ -4,7 +4,7 @@
 #
 Name     : pkg-config
 Version  : 0.28
-Release  : 10
+Release  : 11
 URL      : http://pkgconfig.freedesktop.org/releases/pkg-config-0.28.tar.gz
 Source0  : http://pkgconfig.freedesktop.org/releases/pkg-config-0.28.tar.gz
 Summary  : tilde test module
