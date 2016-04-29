@@ -4,7 +4,7 @@
 #
 Name     : pkg-config
 Version  : 0.29.1
-Release  : 13
+Release  : 14
 URL      : http://pkgconfig.freedesktop.org/releases/pkg-config-0.29.1.tar.gz
 Source0  : http://pkgconfig.freedesktop.org/releases/pkg-config-0.29.1.tar.gz
 Summary  : Dummy pkgconfig test package for testing pkgconfig
