@@ -6,7 +6,7 @@
 #
 Name     : pkg-config
 Version  : 0.29.2
-Release  : 17
+Release  : 18
 URL      : http://pkgconfig.freedesktop.org/releases/pkg-config-0.29.2.tar.gz
 Source0  : http://pkgconfig.freedesktop.org/releases/pkg-config-0.29.2.tar.gz
 Source99 : http://pkgconfig.freedesktop.org/releases/pkg-config-0.29.2.tar.gz.asc
@@ -53,8 +53,11 @@ doc components for the pkg-config package.
 %setup -q -n pkg-config-0.29.2
 
 %build
+export http_proxy=http://127.0.0.1:9/
+export https_proxy=http://127.0.0.1:9/
+export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1490212656
+export SOURCE_DATE_EPOCH=1502729271
 %configure --disable-static
 make V=1  %{?_smp_mflags}
 
@@ -62,11 +65,11 @@ make V=1  %{?_smp_mflags}
 export LANG=C
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
-export no_proxy=localhost
+export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1490212656
+export SOURCE_DATE_EPOCH=1502729271
 rm -rf %{buildroot}
 %make_install
 

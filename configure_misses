@@ -1,0 +1,3 @@
+Configure miss: whether to list both direct and indirect dependencies
+Configure miss: if prefix should be redefined at runtime
+Configure miss: if internal glib should be used
