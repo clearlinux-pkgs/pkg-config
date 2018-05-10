@@ -6,7 +6,7 @@
 #
 Name     : pkg-config
 Version  : 0.29.2
-Release  : 19
+Release  : 20
 URL      : http://pkgconfig.freedesktop.org/releases/pkg-config-0.29.2.tar.gz
 Source0  : http://pkgconfig.freedesktop.org/releases/pkg-config-0.29.2.tar.gz
 Source99 : http://pkgconfig.freedesktop.org/releases/pkg-config-0.29.2.tar.gz.asc
