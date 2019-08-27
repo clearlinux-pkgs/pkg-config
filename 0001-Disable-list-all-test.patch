@@ -1,0 +1,34 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: Patrick McCarty <patrick.mccarty@intel.com>
+Date: Mon, 26 Aug 2019 17:10:50 -0700
+Subject: [PATCH] Disable --list-all test
+
+This --list-all test passes with the internal, vendored glib 2.38.2, but
+fails with the system-provided glib 2.60.6.
+
+The test's expected output mismatches the actual output: expected lines
+are all present, but printed in a different order than declared.
+
+Because the code implementing --list-all is iterating over keys of a
+GHashTable, I suspect it is not a safe assumption for the iteration
+order for a GHashTable to remain fixed as glib evolves over time.
+Clearly the iteration order is different now...
+
+Signed-off-by: Patrick McCarty <patrick.mccarty@intel.com>
+---
+ check/check-print-options | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/check/check-print-options b/check/check-print-options
+index 198e5a1..21dc5b3 100755
+--- a/check/check-print-options
++++ b/check/check-print-options
+@@ -38,7 +38,7 @@ run_test --print-requires-private requires-test
+ RESULT="sub1   Subdirectory package 1 - Test package 1 for subdirectory
+ sub2   Subdirectory package 2 - Test package 2 for subdirectory
+ broken Broken package - Module with broken .pc file"
+-PKG_CONFIG_LIBDIR="$srcdir/sub" run_test --list-all
++#PKG_CONFIG_LIBDIR="$srcdir/sub" run_test --list-all
+ 
+ # Check handling when multiple incompatible options are set
+ RESULT="Ignoring incompatible output option \"--modversion\"
