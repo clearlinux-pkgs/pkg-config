@@ -6,10 +6,10 @@
 #
 Name     : pkg-config
 Version  : 0.29.2
-Release  : 22
+Release  : 23
 URL      : http://pkgconfig.freedesktop.org/releases/pkg-config-0.29.2.tar.gz
 Source0  : http://pkgconfig.freedesktop.org/releases/pkg-config-0.29.2.tar.gz
-Source1 : http://pkgconfig.freedesktop.org/releases/pkg-config-0.29.2.tar.gz.asc
+Source1  : http://pkgconfig.freedesktop.org/releases/pkg-config-0.29.2.tar.gz.asc
 Summary  : Dummy pkgconfig test package for testing pkgconfig
 Group    : Development/Tools
 License  : GPL-2.0 LGPL-2.0
@@ -72,6 +72,7 @@ man components for the pkg-config package.
 
 %prep
 %setup -q -n pkg-config-0.29.2
+cd %{_builddir}/pkg-config-0.29.2
 %patch1 -p1
 
 %build
@@ -79,11 +80,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1566865002
+export SOURCE_DATE_EPOCH=1605554748
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
-export FCFLAGS="$CFLAGS -fno-lto "
-export FFLAGS="$CFLAGS -fno-lto "
+export FCFLAGS="$FFLAGS -fno-lto "
+export FFLAGS="$FFLAGS -fno-lto "
 export CXXFLAGS="$CXXFLAGS -fno-lto "
 %configure --disable-static
 make  %{?_smp_mflags}
@@ -93,14 +94,14 @@ export LANG=C.UTF-8
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-make VERBOSE=1 V=1 %{?_smp_mflags} check
+make %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1566865002
+export SOURCE_DATE_EPOCH=1605554748
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/pkg-config
-cp COPYING %{buildroot}/usr/share/package-licenses/pkg-config/COPYING
-cp glib/COPYING %{buildroot}/usr/share/package-licenses/pkg-config/glib_COPYING
+cp %{_builddir}/pkg-config-0.29.2/COPYING %{buildroot}/usr/share/package-licenses/pkg-config/4cc77b90af91e615a64ae04893fdffa7939db84c
+cp %{_builddir}/pkg-config-0.29.2/glib/COPYING %{buildroot}/usr/share/package-licenses/pkg-config/bf50bac24e7ec325dbb09c6b6c4dcc88a7d79e8f
 %make_install
 
 %files
@@ -121,8 +122,8 @@ cp glib/COPYING %{buildroot}/usr/share/package-licenses/pkg-config/glib_COPYING
 
 %files license
 %defattr(0644,root,root,0755)
-/usr/share/package-licenses/pkg-config/COPYING
-/usr/share/package-licenses/pkg-config/glib_COPYING
+/usr/share/package-licenses/pkg-config/4cc77b90af91e615a64ae04893fdffa7939db84c
+/usr/share/package-licenses/pkg-config/bf50bac24e7ec325dbb09c6b6c4dcc88a7d79e8f
 
 %files man
 %defattr(0644,root,root,0755)
