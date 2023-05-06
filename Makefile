@@ -1,5 +1,5 @@
 PKG_NAME := pkg-config
-URL = http://pkgconfig.freedesktop.org/releases/pkg-config-0.29.2.tar.gz
+URL = https://gitea.treehouse.systems/ariadne/pkgconf/archive/pkgconf-1.9.5.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
