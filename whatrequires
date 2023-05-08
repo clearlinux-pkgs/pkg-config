@@ -24,7 +24,6 @@ ark
 arpack-ng
 assimp
 blender
-cairo
 cantata
 cantor
 ccache
@@ -34,6 +33,7 @@ clamav
 cmake
 compat-curl-gnutls-soname4
 compat-icu4c-soname67
+compat-icu4c-soname70
 compat-libva-soname1
 conky
 curl
