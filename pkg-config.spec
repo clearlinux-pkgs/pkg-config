@@ -5,7 +5,7 @@
 #
 Name     : pkg-config
 Version  : 1.9.5
-Release  : 26
+Release  : 27
 URL      : https://gitea.treehouse.systems/ariadne/pkgconf/archive/pkgconf-1.9.5.tar.gz
 Source0  : https://gitea.treehouse.systems/ariadne/pkgconf/archive/pkgconf-1.9.5.tar.gz
 Summary  : a library for accessing and manipulating development framework configuration
@@ -88,7 +88,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1683559686
+export SOURCE_DATE_EPOCH=1683654064
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
 export FCFLAGS="$FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
@@ -110,6 +110,7 @@ cp %{_builddir}/pkgconf/COPYING %{buildroot}/usr/share/package-licenses/pkg-conf
 DESTDIR=%{buildroot} ninja -C builddir install
 ## install_append content
 ln -s pkgconf %{buildroot}/usr/bin/pkg-config
+ln -s pkgconf %{buildroot}/usr/bin/x86_64-generic-linux-gnu-pkg-config
 ## install_append end
 
 %files
@@ -119,6 +120,7 @@ ln -s pkgconf %{buildroot}/usr/bin/pkg-config
 %defattr(-,root,root,-)
 /usr/bin/pkg-config
 /usr/bin/pkgconf
+/usr/bin/x86_64-generic-linux-gnu-pkg-config
 
 %files dev
 %defattr(-,root,root,-)

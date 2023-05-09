@@ -1,1 +1,2 @@
 ln -s pkgconf %{buildroot}/usr/bin/pkg-config
+ln -s pkgconf %{buildroot}/usr/bin/x86_64-generic-linux-gnu-pkg-config

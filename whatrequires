@@ -1,6 +1,5 @@
 # This file contains recursive sources that require this package
 Coin
-CuraEngine
 FreeRDP
 LibVNCServer
 Linux-PAM
@@ -30,6 +29,7 @@ ccache
 ceph
 check
 clamav
+clr-power-tweaks
 cmake
 compat-curl-gnutls-soname4
 compat-icu4c-soname67
@@ -51,6 +51,7 @@ dwarves
 e2fsprogs
 elfutils
 elisa
+ethtool
 evolution
 evolution-data-server
 evolution-ews
@@ -68,8 +69,10 @@ gmic
 gnutls
 grpc
 gstreamer
+gvim
 gwenview
 hyperscan
+ibus-typing-booster
 icu4c
 inkscape
 innoextract
@@ -140,6 +143,7 @@ libproxy
 libpsl
 librdkafka
 librealsense
+libreoffice
 librepo
 libsamplerate
 libsndfile
@@ -196,6 +200,7 @@ pyparted
 qca-qt5
 qqc2-desktop-style
 qt6base
+qtbase
 rabbitmq-c
 rdma-core
 rr
@@ -207,6 +212,7 @@ sonnet
 spdlog
 speexdsp
 stellarium
+subunit
 sundials
 supertuxkart
 telepathy-qt
@@ -215,6 +221,7 @@ user-manager
 util-linux
 v4l-utils
 valijson
+vim
 vkd3d
 vpp
 webkitgtk
