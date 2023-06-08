@@ -4,7 +4,6 @@ FreeRDP
 LibVNCServer
 Linux-PAM
 MuseScore
-QGIS
 RawTherapee
 Remmina
 SDL2
@@ -32,7 +31,6 @@ clamav
 clr-power-tweaks
 cmake
 compat-curl-gnutls-soname4
-compat-icu4c-soname67
 compat-icu4c-soname70
 compat-libva-soname1
 conky
@@ -69,7 +67,6 @@ gmic
 gnutls
 grpc
 gstreamer
-gvim
 gwenview
 hyperscan
 ibus-typing-booster
@@ -97,6 +94,7 @@ kio-extras
 kjs
 kleopatra
 kmod
+kpipewire
 krb5
 krita
 kstars
@@ -139,7 +137,6 @@ libnetfilter_conntrack
 libnftnl
 libnl
 libpciaccess
-libproxy
 libpsl
 librdkafka
 librealsense
@@ -215,13 +212,13 @@ stellarium
 subunit
 sundials
 supertuxkart
+synergy
 telepathy-qt
 tpm2-tss
 user-manager
 util-linux
 v4l-utils
 valijson
-vim
 vkd3d
 vpp
 webkitgtk
